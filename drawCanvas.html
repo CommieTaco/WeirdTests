@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Made by Rolin Azmitia as a whatever exercise, thanks Platzi and Freddy! -->
+    <meta charset="UTF-8">
+    <title>Draw in a Canvas!</title>
+    <style>
+    .button1{
+        cursor: auto;
+        background:rgb(230, 230, 28);
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+    }
+
+    .button1:hover{
+        cursor: pointer;
+        background:rgb(192, 192, 14);
+    }
+
+    .button{     
+
+        background:rgb(102, 230, 28);
+        cursor: auto;   
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+        width: 215px;
+    }
+
+    .button:hover{
+        cursor: pointer;
+        background: rgb(69, 177, 7);
+    }
+
+    input:focus, button:focus, select:focus{
+        outline: none;
+    }
+
+    </style>
+</head>
+<body style="background: rgb(65, 125, 189)">
+    <marquee behavior="alternate" direction="left"><h2 style="font: Helvetica;">Use your keyboard or mouse to draw!</h1></marquee>
+    <center>
+        <h4>You can change the background of the canvas writing the name of a color (can be in hexadecimal) or to one
+            of the default images with these buttons.
+        </h4>
+        <input type="button" class="button" id="buttNone" value="None" style="border-radius: 1.5em; padding:0.5em; float:left; margin:0.5em; font-size: 18px; font-weight: bold;">
+        <input type="button" class="button" id="buttPepe" value="Pepe" style="border-radius: 1.5em; padding:0.5em; float:right; margin:1em; font-size: 18px; font-weight: bold;">
+        <input type="button" class="button" id="buttMain" value="Maincra" style="border-radius: 1.5em; padding:0.5em; float:left; margin:1em; font-size: 18px; font-weight: bold;">
+        <input type="button" class="button" id="buttDew" value="Dew It" style="border-radius: 1.5em; padding:0.5em; float:right; margin:1em; font-size: 18px; font-weight: bold;">
+        <input type="text" id="txtCol" style="max-width: 300px; background: rgb(192, 189, 189); border-radius: 2em; font-size: 18px; text-indent: 10px;"><br><br>
+        <input type="button" id="cambCol" class="button1" value="Change Canvas color" style="border-radius: 1.5em; font-size: 18px; font-weight: bold;">
+    <br>
+    <input type="button" class="button" id="buttWall" value="IDK" style="border-radius: 1.5em; padding:0.5em; float:center; margin:10px; font-size: 18px; font-weight: bold;">
+    <br>
+    <canvas id="drawing" width="1250" height="420" style="background: #FFA;"></canvas>
+    </center>
+    <script src="events.js"></script>
+</body>
+</html>
